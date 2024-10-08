@@ -5,7 +5,11 @@ This repository implements a Retrieval-Augmented Generation (RAG) using the Milv
 [![RAG Architecture](images/rag_architecture.png)](https://medium.com/@bijit211987/designing-high-performing-rag-systems-464260b76815)
 
 ## Follow below steps Steps
-### 1. Add Open-AI API key:
+### 1. Install requirements:
+```
+pip install -r requirements.txt
+```
+### 2. Add Open-AI API key:
 ```python
 # ingest_pdf.py
 Line 31: os.environ["OPENAI_API_KEY"] = "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -14,7 +18,7 @@ Line 31: os.environ["OPENAI_API_KEY"] = "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Line 11: os.environ["OPENAI_API_KEY"] = "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
-### 2. Start Milvus Server using Docker
+### 3. Start Milvus Server using Docker
 For Windows, open CMD and run the command:
 1. ```
    wsl
@@ -26,10 +30,10 @@ For Windows, open CMD and run the command:
    bash standalone_embed.sh start
    ```
 
-### 3. Add PDFs to vector store using script 'ingest_pdf.py'
+### 4. Add PDFs to vector store using script 'ingest_pdf.py'
 This script loads PDFs from the New_PDFs folder and embed them to the Milvus vector store
 
-### 4. Run interface using 'main_intercae.py'
+### 5. Run interface using 'main_intercae.py'
 This script works as the main interface for the chatbot.
 
 ## Feedback
